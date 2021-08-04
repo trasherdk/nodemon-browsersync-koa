@@ -1,0 +1,29 @@
+{
+  "name": "nodemon-browsersync-koa",
+  "version": "0.0.1",
+  "description": "Testing nodemon with browsersync and Koa API server",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm-run-all -p nodemon browser-sync",
+    "nodemon": "nodemon src/server.js",
+    "browser-sync": "browser-sync start -s --index=src/index.html --files=src/* --no-ui",
+    "browser-sync-1": "browser-sync start -s --index=src/index.html --files=src/* --no-open --no-notify --reload-delay=500"
+  },
+  "keywords": [
+    "nodemon",
+    "browsersync"
+  ],
+  "author": "TrasherDK",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "kcors": "^2.2.2",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0"
+  }
+}

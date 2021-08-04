@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <p>Does browsersync work, or not? It seems to maybe work:)</p>
+  <pre></pre>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    axios
+      .get('http://localhost:1337')
+      .then(res => {
+        document.querySelector('pre').textContent = JSON.stringify(res.data, null, 2)
+      })
+      .catch(err => console.error(err))
+  </script>
+</body>
+</html>
