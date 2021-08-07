@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all -p nodemon browser-sync",
     "nodemon": "nodemon src/server.js",
-    "browser-sync": "browser-sync start -s --index=src/index.html --files=src/* --no-ui",
+    "browser-sync": "browser-sync start -s --index=src/index.html --files=src/* --no-ui"
   },
   "repository": {
     "type": "git",
